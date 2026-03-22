@@ -5,7 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Import pages
 import HomePage from "./pages/HomePage.jsx";
-import FundraiserPage from "./pages/FundraiserPage";
+import FundraiserPage from "./pages/FundraiserPage.jsx";
+import LoginPage from "./pages/LoginPage.jsx"
 
 // Import components
 import NavBar from "./components/NavBar.jsx";
@@ -16,7 +17,8 @@ const router = createBrowserRouter([
     element: <NavBar />,
     children: [
       { path: "/", element: <HomePage /> },
-      { path: "/fundraiser", element:<FundraiserPage /> }
+      { path: "/login", element: <LoginPage />},
+      { path: "/fundraiser/:id", element:<FundraiserPage /> }
 
     ],
   },

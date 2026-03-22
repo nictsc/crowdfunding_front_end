@@ -6,7 +6,7 @@ function NavBar() {
         <div>
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="/fundraiser">Fundraiser</Link>
+                <Link to="/login">Login</Link>
             </nav>
             <Outlet />
         </div>

@@ -9,9 +9,11 @@ export default function useFundraisers() {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
 
+
+    // tell what variable userEffect needs to care about
     useEffect(() => {
         getFundraisers()
-            .then((fundraisers) => {
+            .then(fundraisers => {
                 setFundraisers(fundraisers);
                 setIsLoading(false);
             })
