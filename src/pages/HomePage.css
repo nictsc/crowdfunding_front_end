@@ -1,5 +1,11 @@
 #fundraiser-list {
     display: grid;
     grid-template-columns: 30% 30% 30%;
-    
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#nav-bar{
+    display: flex;
+    justify-content: flex-end;
 }

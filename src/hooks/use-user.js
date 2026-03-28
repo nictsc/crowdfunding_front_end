@@ -1,24 +1,19 @@
 
 import { useState, useEffect } from "react";
-import getUser from "../api/get-user";
-import getFundraiser from "../api/get-fundraiser";
 
-export default function useFundraiser(fundraiserId) {
-  const [fundraiser, setFundraiser] = useState();
+import getUser from "../api/get-user";
+
+export default function useUser(userId) {
+  const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [user, setUser] = useState(); 
   const [error, setError] = useState();
 
   useEffect(() => {
     // Here we pass the fundraiserId to the getFundraiser function.
-    getFundraiser(fundraiserId)
-      .then((fundraiser) => {
-        setFundraiser(fundraiser);
+    getUser(userId)
+      .then((user) => {
+        setUser(user);
         setIsLoading(false);
-        return getUser(fundraiser.owner);
-      })
-      .then((userData) => {
-        setUser(userData);
       })
       .catch((error) => {
         setError(error);
@@ -26,7 +21,7 @@ export default function useFundraiser(fundraiserId) {
       });
 
     // This time we pass the fundraiserId to the dependency array so that the hook will re-run if the fundraiserId changes.
-  }, [fundraiserId]);
+  }, [userId]);
 
-  return { fundraiser, user, isLoading, error };
+  return { user, isLoading, error };
 }
