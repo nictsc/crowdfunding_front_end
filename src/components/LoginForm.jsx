@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import postLogin from "../api/post-login.js"
+
+import postLogin from "../api/post-login.js";
+import { useAuth } from "../hooks/use-auth.js";
 
 function LoginForm() {
     const navigate = useNavigate();
+    const { setAuth } = useAuth();
+
     const [credientials, setCredientials] = useState({
         username:"",
         password:"",
@@ -28,6 +32,9 @@ function LoginForm() {
             ).then((response) => {
                 // go to Application -> Local Storage in dev tools
                 window.localStorage.setItem("token", response.token);
+                setAuth({
+                    token:response.token,
+                });
                 navigate("/");
             })
         }

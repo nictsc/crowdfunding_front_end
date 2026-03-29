@@ -18,6 +18,8 @@ function FundraiserPage() {
   const { id } = useParams();
   // useFundraiser returns three pieces of info, so we need to grab them all here
   const { fundraiser, user, isLoading, error } = useFundraiser(id);
+  const isOpen = fundraiser?.is_open === true || fundraiser?.is_open === "true";
+  const statusLabel = isOpen ? "open" : "closed";
   
   console.log(isLoading);
 
@@ -33,14 +35,14 @@ function FundraiserPage() {
     <div>
       <img src={fundraiser.image} alt={fundraiser.description || "Fundraiser image"} />
       <h2>{fundraiser.title}</h2>
-      <h3>Fundraiser creator {user?.first_name} {user?.last_name}</h3>
-      <h3>{`Status is ${fundraiser.is_open}`}</h3>
+      <h3>Created by {user?.first_name} {user?.last_name}</h3>
+      <h3>This fundraiser is {statusLabel}.</h3>
       <h3>Pledges</h3>
-      <ul>
+      <p>
         {fundraiser.pledges.map((pledgeData) => (
           <PledgeItem key={pledgeData.id} pledgeData={pledgeData} />
         ))}
-      </ul>
+      </p>
     </div>
   );
 }
