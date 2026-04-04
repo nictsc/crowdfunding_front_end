@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import postRegister from "../api/post-register.js";
 import { useAuth } from "../hooks/use-auth.js";
 
+import Footer from "./Footer";
+
 function SignupForm() {
   const navigate = useNavigate();
   const { setAuth } = useAuth();
@@ -67,64 +69,64 @@ function SignupForm() {
   };
 
   return (
-    <div className="page page--narrow">
-      <div className="card">
-        <div className="page-header">
+    <div className="signup-page">
+      <div className="signup-main">
+        <form className="signup-form" onSubmit={handleSubmit}>
           <h2>Create an account</h2>
-          <p className="text-muted">
-            Want to support the Catan Community?
-          </p>
-        </div>
-        <form className="form" onSubmit={handleSubmit}>
-          <div className="form-field">
-            <label htmlFor="username">Username</label>
-            <input
-              id="username"
-              type="text"
-              value={form.username}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="email">Email (optional)</label>
-            <input
-              id="email"
-              type="email"
-              value={form.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              value={form.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="confirmPassword">Confirm password</label>
-            <input
-              id="confirmPassword"
-              type="password"
-              value={form.confirmPassword}
-              onChange={handleChange}
-              required
-            />
-          </div>
+            <div className="username-field">
+              <label htmlFor="username">Username</label>
+              <input
+                id="username"
+                type="text"
+                placeholder="Username"
+                value={form.username}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="email-field">
+              <label htmlFor="email">Email (optional)</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email"
+                value={form.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="password-field">
+              <label htmlFor="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                value={form.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="confirmation-field">
+              <label htmlFor="confirmPassword">Confirm password</label>
+              <input
+                id="confirmPassword"
+                type="password"
+                placeholder="Type password again"
+                value={form.confirmPassword}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-          {errorMessage && <p className="text-error">{errorMessage}</p>}
+            {errorMessage && <p className="text-error">{errorMessage}</p>}
 
-          <div className="form-actions">
-            <button className="button-primary" type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Registering..." : "Register"}
-            </button>
-          </div>
+            <div className="form-actions">
+              <button className="register-button" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Registering..." : "Register"}
+              </button>
+            </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
