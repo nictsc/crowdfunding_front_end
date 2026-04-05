@@ -23,6 +23,7 @@ function NavBar() {
                 <nav>
                     <Link to="/">Home</Link>
                     <Link to="/fundraisers">Fundraisers</Link>
+                    <Link to="/create">Create a Fundraiser</Link>
                     {auth.token ? (
                         <Link to="/" onClick={handleLogout}>
                             Log Out

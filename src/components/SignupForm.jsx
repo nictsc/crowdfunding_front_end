@@ -119,11 +119,7 @@ function SignupForm() {
 
             {errorMessage && <p className="text-error">{errorMessage}</p>}
 
-            <div className="form-actions">
-              <button className="register-button" type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Registering..." : "Register"}
-              </button>
-            </div>
+            <button className="submit-button" type="submit">Sign Up</button>
         </form>
       </div>
       <Footer />

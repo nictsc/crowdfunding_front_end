@@ -10,6 +10,7 @@ import FundraiserPage from "./pages/FundraiserPage.jsx";
 import FundraisersPage from "./pages/FundraisersPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignupPage from "./pages/SignupPage.jsx"
+import CreatePage from "./pages/CreatePage.jsx";
  
 
 // Import components
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/fundraisers", element: <FundraisersPage /> },
+      { path: "/create", element: <CreatePage /> },
       { path: "/login", element: <LoginPage />},
       { path: "/signup", element: <SignupPage />},
       { path: "/fundraiser/:id", element:<FundraiserPage /> }

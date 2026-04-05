@@ -175,7 +175,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px 0;
+    padding: 24px;
 }
 
 .fundraiser-page .tile {
@@ -202,14 +202,18 @@ footer {
     padding: 24px 0;
 }
 
-/* Signup Page */
-.signup-page {
+/* Signup, Login and Create Fundraiser Pages */
+.signup-page,
+.login-page,
+.createfundraiser-page {
     min-height: 75vh;
     display: flex;
     flex-direction: column;
 }
 
-.signup-main {
+.signup-main,
+.login-main,
+.createfundraiser-main {
     flex: 1;
     display: flex;
     align-items: center;
@@ -217,25 +221,11 @@ footer {
     padding: 24px;
 }
 
-/* Login Page */
-.login-page /* outer container */ {
-    min-height: 75vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.login-main /* inner container */ {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-}
-
-
+/* Forms */
 .pledge-form, 
 .login-form,
-.signup-form {
+.signup-form,
+.createfundraiser-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,19 +239,20 @@ footer {
     background: #92d6ff;
 }
 
+/* Form fields */
 .amount-field,
 .comment-field,
 .username-field,
 .password-field,
 .email-field,
-.confirmation-field {
+.confirmation-field,
+.title-field,
+.description-field,
+.image-field,
+.goal-field {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.pledge-form label {
-    font-weight: 700;
 }
 
 .pledge-form input,
@@ -279,9 +270,8 @@ footer {
     min-height: 120px;
 }
 
-.pledge-form button,
-.login-form button,
-.signup-form button {
+/* Form buttons */
+.submit-button {
     align-self: center;
     padding: 12px 20px;
     border: none;
