@@ -67,7 +67,7 @@ function LoginForm() {
                         onChange={handleChange} 
                         />
                     </div>
-                    <button className="login-button" type="submit" onClick={handleSubmit}>Login</button>
+                    <button className="submit-button" type="submit" onClick={handleSubmit}>Login</button>
                 </form>
             </div>
             <Footer />
