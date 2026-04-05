@@ -75,11 +75,11 @@ Crowds of Catan is a crowdfunding platform the Catanians (Catan Community) can p
 ## Screenshots
 
 Homepage
-![Homepage](.screenshots/homepage.png)
+![Homepage](screenshots/homepage.png)
 
 Fundraiser with pledges
-![Fundraiser with pledges](.screenshots/fundraiser_form_and_create_page.png)
+![Fundraiser with pledges](screenshots/fundraiser_form_and_create_page.png)
 
 Create Fundraiser form
-![Create Fundraiser form](.screenshots/create_fundraiser_form.png)
+![Create Fundraiser form](screenshots/create_fundraiser_form.png)
 
