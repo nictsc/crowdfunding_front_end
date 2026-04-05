@@ -164,19 +164,6 @@ footer {
 }
 
 /* Fundraiser Details Page */
-.fundraiser-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 75vh;
-}
-
-.fundraiser-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-}
 
 .fundraiser-page .tile {
     width: min(900px, calc(100% - 48px));
@@ -187,6 +174,7 @@ footer {
 }
 
 /* Home Page */
+
 .home-page {
     min-height: 55vh;
     display: flex;
@@ -202,7 +190,9 @@ footer {
     padding: 24px 0;
 }
 
-/* Signup, Login and Create Fundraiser Pages */
+/* Signup, Login, Fundraiser Details and Create Fundraiser Pages */
+
+.fundraiser-page,
 .signup-page,
 .login-page,
 .createfundraiser-page {
@@ -211,6 +201,7 @@ footer {
     flex-direction: column;
 }
 
+.fundraiser-main,
 .signup-main,
 .login-main,
 .createfundraiser-main {
