@@ -1,15 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
 
 
 // Import pages
 import HomePage from "./pages/HomePage.jsx";
 import FundraiserPage from "./pages/FundraiserPage.jsx";
-import LoginPage from "./pages/LoginPage.jsx"
+import FundraisersPage from "./pages/FundraisersPage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import SignupPage from "./pages/SignupPage.jsx"
+import CreatePage from "./pages/CreatePage.jsx";
+ 
 
 // Import components
 import NavBar from "./components/NavBar.jsx";
+
+import { AuthProvider } from "./components/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +24,10 @@ const router = createBrowserRouter([
     element: <NavBar />,
     children: [
       { path: "/", element: <HomePage /> },
+      { path: "/fundraisers", element: <FundraisersPage /> },
+      { path: "/create", element: <CreatePage /> },
       { path: "/login", element: <LoginPage />},
+      { path: "/signup", element: <SignupPage />},
       { path: "/fundraiser/:id", element:<FundraiserPage /> }
 
     ],
@@ -26,6 +36,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );

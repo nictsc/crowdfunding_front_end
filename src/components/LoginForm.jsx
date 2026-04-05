@@ -1,9 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import postLogin from "../api/post-login.js"
+
+import postLogin from "../api/post-login.js";
+import { useAuth } from "../hooks/use-auth.js";
+
+import Footer from "../components/Footer";
+import "../index.css";
 
 function LoginForm() {
     const navigate = useNavigate();
+    const { setAuth } = useAuth();
+
     const [credientials, setCredientials] = useState({
         username:"",
         password:"",
@@ -26,8 +33,11 @@ function LoginForm() {
                 credientials.username,
                 credientials.password
             ).then((response) => {
-                // go to Application -> Local Storage in dev tools
+                // Go to Application -> Local Storage in dev tools
                 window.localStorage.setItem("token", response.token);
+                setAuth({
+                    token:response.token,
+                });
                 navigate("/");
             })
         }
@@ -35,28 +45,34 @@ function LoginForm() {
 
 
     return (
-        <form>
-            <div>
-                <label htmlFor="username">Username: </label>
-                <input 
-                type="text" 
-                id ="username" 
-                placeholder="Enter username"
-                onChange={handleChange}
-                />
+        <div className="login-page">
+            <div className="login-main">
+                <form className ="login-form">
+                    <h2>Login</h2>
+                    <div className ="username-field">
+                        <label htmlFor="username">Username </label>
+                        <input 
+                        type="text" 
+                        id ="username" 
+                        placeholder="Username"
+                        onChange={handleChange}
+                        />
+                    </div>
+                    <div className ="password-field">
+                        <label htmlFor="password">Password </label>
+                        <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Password"
+                        onChange={handleChange} 
+                        />
+                    </div>
+                    <button className="submit-button" type="submit" onClick={handleSubmit}>Login</button>
+                </form>
             </div>
-            <div>
-                <label htmlFor="password">Password: </label>
-                <input 
-                type="password" 
-                id="password" 
-                placeholder="Password"
-                onChange={handleChange} 
-                />
-            </div>
-            <button type="submit" onClick={handleSubmit}>Login</button>
-        </form>
-    );
+            <Footer />
+        </div>
+        );
 }
 
 export default LoginForm;
