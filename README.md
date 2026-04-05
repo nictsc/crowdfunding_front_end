@@ -1,7 +1,7 @@
 ## URLs
 
-Frontend - https://shimmering-pie-97697b.netlify.app/
-Backend - https://github.com/nictsc/crowdfunding_back_end
+- Frontend - https://shimmering-pie-97697b.netlify.app/
+- Backend - https://github.com/nictsc/crowdfunding_back_end
 
 ## Concept / Name
 
@@ -78,8 +78,8 @@ Homepage
 ![Homepage](screenshots/homepage.png)
 
 Fundraiser with pledges
-![Fundraiser with pledges](screenshots/fundraiser_form_and_create_page.png)
+![Fundraiser with pledges](screenshots/fundraiser_with_pledge.png)
 
 Create Fundraiser form
-![Create Fundraiser form](screenshots/create_fundraiser_form.png)
+![Create Fundraiser form](screenshots/Create_fundraiser_form.png)
 
