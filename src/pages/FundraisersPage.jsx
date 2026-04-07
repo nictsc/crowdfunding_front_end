@@ -7,14 +7,17 @@ import "../index.css";
 
 function FundraisersPage() {
   const { fundraisers } = useFundraisers();
+  const displayedFundraisers = fundraisers.slice(0, 6);
 
   return (
-    <div>
-      <div id="fundraiser-list">
-        {fundraisers.map((fundraiserData, key) => {
+    <div className="fundraisers-page">
+      <main className="fundraisers-main">
+        <div id="fundraiser-list">
+        {displayedFundraisers.map((fundraiserData, key) => {
           return <FundraiserCard key={key} fundraiserData={fundraiserData} />;
         })}
-      </div>
+        </div>
+      </main>
       <Footer />
     </div>
   );
