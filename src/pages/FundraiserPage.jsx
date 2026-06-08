@@ -113,7 +113,6 @@ function FundraiserPage() {
 
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
