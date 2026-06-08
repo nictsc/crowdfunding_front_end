@@ -18,7 +18,6 @@ function FundraisersPage() {
         })}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
