@@ -10,7 +10,7 @@ function HomePage() {
                 <HeroImage />
                 <SloganTile />
             </div>
-            <Footer />
+            
         </div>
     );
 }
