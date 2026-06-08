@@ -1,5 +1,6 @@
 // This page lists a fundraiser with its corresponding details.
 import { Link, useParams } from "react-router-dom";
+import { useRef } from "react";
 import useFundraiser from "../hooks/use-fundraiser";
 
 import useUser from "../hooks/use-user";
@@ -29,6 +30,33 @@ function FundraiserPage() {
   const { fundraiser, user, isLoading, error } = useFundraiser(id);
   const isOpen = fundraiser?.is_open === true || fundraiser?.is_open === "true";
   const statusLabel = isOpen ? "open" : "closed";
+
+  const amountRef = useRef();
+  const commentRef = useRef();
+
+  async function handlePledgeSubmit(e) {
+    e.preventDefault();
+    const pledgeData = {
+      amount: Number(amountRef.current.value),
+      comment: commentRef.current.value,
+      anonymous: false,
+      fundraiser: Number(id),
+    };
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/pledges/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${auth.token}`,
+      },
+      body: JSON.stringify(pledgeData),
+    });
+    if (response.ok) {
+      window.location.reload();
+    } else {
+      const err = await response.json();
+      alert(JSON.stringify(err));
+    }
+  }
   
   console.log(isLoading);
 
@@ -55,14 +83,15 @@ function FundraiserPage() {
             ))}
           </ul>
           {isLoggedIn ? (
-            <form className="pledge-form">
+            <form className="pledge-form" onSubmit={handlePledgeSubmit}>
               <h3>Create a Pledge</h3>
               <div className="amount-field">
                   <label htmlFor="number">Amount</label>
-                <input 
-                  id="number" 
-                  type="number" 
+                <input
+                  id="number"
+                  type="number"
                   required
+                  ref={amountRef}
                 />
               </div>
               <div className="comment-field">
@@ -71,6 +100,7 @@ function FundraiserPage() {
                   id="comment"
                   name="comment"
                   rows="5"
+                  ref={commentRef}
                 />
               </div>
               <button className="submit-button" type="submit">Pledge</button>
