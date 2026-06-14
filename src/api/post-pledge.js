@@ -1,5 +1,5 @@
 async function postPledge({amount, comment, anonymous, fundraiser}) {
-  const url = `${import.meta.env.VITE_API_URL}/pledge/`;
+  const url = `${import.meta.env.VITE_API_URL}/pledges/`;
   const token = window.localStorage.getItem("token");
 
   const headers = {
