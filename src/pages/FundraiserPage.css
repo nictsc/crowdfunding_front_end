@@ -1,0 +1,41 @@
+.fundraiser-page {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fundraiser-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fundraiser-page .tile {
+    width: min(900px, calc(100% - 48px));
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #FFF192;
+}
+
+.fundraiser-page .tile img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    object-position: center;
+    background: #FFF192;
+    display: block;
+}

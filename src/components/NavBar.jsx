@@ -3,8 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
 import Logo from "./Logo.jsx";
 import hamburgerIcon from "../../media/hamburger.svg";
-// remember to import the relevant css for the NavBar.jsx
-import "../index.css" 
+import "./NavBar.css";
 
 
 

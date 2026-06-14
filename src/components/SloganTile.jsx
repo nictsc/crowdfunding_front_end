@@ -1,4 +1,4 @@
-import "../index.css" 
+import "./SloganTile.css";
 
 function SloganTile() {
     return (

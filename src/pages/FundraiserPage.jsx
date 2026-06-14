@@ -7,7 +7,7 @@ import useUser from "../hooks/use-user";
 import { useAuth } from "../hooks/use-auth";
 import Footer from "../components/Footer";
 
-import "../index.css";
+import "./FundraiserPage.css";
 
 function PledgeItem({ pledgeData }) {
   const { user: supporter } = useUser(pledgeData.supporter);
@@ -42,7 +42,7 @@ function FundraiserPage() {
       anonymous: false,
       fundraiser: Number(id),
     };
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/pledges/`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/pledge/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import HeroImage from "../components/HeroImage";
 import SloganTile from "../components/SloganTile";
-import "../index.css";
+import "./HomePage.css";
 
 function HomePage() {
     return (

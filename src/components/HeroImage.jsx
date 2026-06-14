@@ -1,5 +1,5 @@
 
-import "../index.css" 
+import "./HeroImage.css";
 import bannerImage from "../../media/banner.png"
 
 function HeroImage() {

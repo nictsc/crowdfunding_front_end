@@ -1,0 +1,20 @@
+.hero-image {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        min-height: 50vh;
+        padding: 50px;
+    }
+}

@@ -1,0 +1,14 @@
+.home-page {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px 0;
+}

@@ -1,0 +1,28 @@
+.pledge-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    width: min(100%, 520px);
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid #d8d8d8;
+    border-radius: 16px;
+    background: #92d6ff;
+}
+
+.pledge-form input,
+.pledge-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.pledge-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
