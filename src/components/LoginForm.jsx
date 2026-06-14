@@ -5,7 +5,7 @@ import postLogin from "../api/post-login.js";
 import { useAuth } from "../hooks/use-auth.js";
 
 import Footer from "../components/Footer";
-import "../index.css";
+import "../pages/LoginPage.css";
 
 function LoginForm() {
     const navigate = useNavigate();

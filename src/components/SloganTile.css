@@ -1,0 +1,16 @@
+.slogan-tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    border-radius: 16px;
+    margin: 0 auto;
+    max-width: 900px;
+    background: #FFF192;
+    padding: 25px;
+}
+
+.slogan-tile p {
+    margin: 0;
+}

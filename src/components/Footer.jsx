@@ -1,5 +1,4 @@
-// remember to import the relevant css code block for the Footer.jsx
-import "../index.css"
+import "./Footer.css";
 import useFundraisers from "../hooks/use-fundraisers.js"; 
 
 function Footer() {

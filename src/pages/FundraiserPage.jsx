@@ -7,7 +7,7 @@ import useUser from "../hooks/use-user";
 import { useAuth } from "../hooks/use-auth";
 import Footer from "../components/Footer";
 
-import "../index.css";
+import "./FundraiserPage.css";
 
 function PledgeItem({ pledgeData }) {
   const { user: supporter } = useUser(pledgeData.supporter);

@@ -5,6 +5,7 @@ import postRegister from "../api/post-register.js";
 import { useAuth } from "../hooks/use-auth.js";
 
 import Footer from "./Footer";
+import "../pages/SignupPage.css";
 
 function SignupForm() {
   const navigate = useNavigate();

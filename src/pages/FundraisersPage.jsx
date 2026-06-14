@@ -3,7 +3,7 @@
 import useFundraisers from "../hooks/use-fundraisers";
 import FundraiserCard from "../components/FundraiserCard";
 import Footer from "../components/Footer";
-import "../index.css";
+import "./FundraisersPage.css";
 
 function FundraisersPage() {
   const { fundraisers } = useFundraisers();

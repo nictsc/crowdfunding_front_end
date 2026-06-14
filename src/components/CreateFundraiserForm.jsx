@@ -9,8 +9,7 @@ import postFundraiser from "../api/post-fundraiser.js";
 import { useAuth } from "../hooks/use-auth.js";
 import Footer from "./Footer";
 
-// Shared app-wide styles.
-import "../index.css";
+import "../pages/CreatePage.css";
 
 function CreateFundraiserForm() {
   const navigate = useNavigate();
