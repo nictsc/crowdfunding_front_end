@@ -42,7 +42,7 @@ function FundraiserPage() {
       anonymous: false,
       fundraiser: Number(id),
     };
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/pledges/`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/pledge/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
