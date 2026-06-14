@@ -1,5 +1,5 @@
 // This page lists a fundraiser with its corresponding details.
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import useFundraiser from "../hooks/use-fundraiser";
 
@@ -23,6 +23,7 @@ function PledgeItem({ pledgeData }) {
 function FundraiserPage() {
   // Here we use a hook that comes for free in react router called `useParams` to get the id from the URL so that we can pass it to our useFundraiser hook.
   const { id } = useParams();
+  const navigate = useNavigate();
   const { auth } = useAuth();
   // Validate if end user is logged in.
   const isLoggedIn = Boolean(auth?.token);
@@ -51,7 +52,7 @@ function FundraiserPage() {
       body: JSON.stringify(pledgeData),
     });
     if (response.ok) {
-      window.location.reload();
+      navigate(0);
     } else {
       const err = await response.json();
       alert(JSON.stringify(err));
