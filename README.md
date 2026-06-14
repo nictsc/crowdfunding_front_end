@@ -1,6 +1,6 @@
 ## URLs
 
-- Frontend - https://shimmering-pie-97697b.netlify.app/
+- Frontend - https://crowdsofcatan.netlify.app/
 - Backend - https://github.com/nictsc/crowdfunding_back_end
 
 ## Concept / Name
