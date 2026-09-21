@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login.js";
 import { useAuth } from "../hooks/use-auth.js";
 
-import Footer from "../components/Footer";
 import "../pages/LoginPage.css";
 
 function LoginForm() {
@@ -70,7 +69,6 @@ function LoginForm() {
                     <button className="submit-button" type="submit" onClick={handleSubmit}>Login</button>
                 </form>
             </div>
-            <Footer />
         </div>
         );
 }

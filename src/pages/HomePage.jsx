@@ -1,4 +1,3 @@
-import Footer from "../components/Footer";
 import HeroImage from "../components/HeroImage";
 import SloganTile from "../components/SloganTile";
 import "./HomePage.css";

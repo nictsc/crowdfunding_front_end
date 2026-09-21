@@ -5,7 +5,6 @@ import useFundraiser from "../hooks/use-fundraiser";
 
 import useUser from "../hooks/use-user";
 import { useAuth } from "../hooks/use-auth";
-import Footer from "../components/Footer";
 
 import "./FundraiserPage.css";
 
