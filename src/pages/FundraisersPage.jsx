@@ -2,7 +2,6 @@
 // // This page lists all the available fundraisers.
 import useFundraisers from "../hooks/use-fundraisers";
 import FundraiserCard from "../components/FundraiserCard";
-import Footer from "../components/Footer";
 import "./FundraisersPage.css";
 
 function FundraisersPage() {

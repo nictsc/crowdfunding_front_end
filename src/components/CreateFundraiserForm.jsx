@@ -7,7 +7,6 @@ import { Link, useNavigate } from "react-router-dom";
 // This helper sends the new fundraiser data to the backend API.
 import postFundraiser from "../api/post-fundraiser.js";
 import { useAuth } from "../hooks/use-auth.js";
-import Footer from "./Footer";
 
 import "../pages/CreatePage.css";
 
@@ -37,7 +36,6 @@ function CreateFundraiserForm() {
             <p>Please <Link to="/login">log in</Link> or <Link to="/signup">sign up</Link> to create a fundraiser.</p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -156,7 +154,6 @@ function CreateFundraiserForm() {
           </button>
         </form>
       </div>
-      <Footer />
     </div>
   );
 }

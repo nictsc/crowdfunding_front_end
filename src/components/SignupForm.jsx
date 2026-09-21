@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import postRegister from "../api/post-register.js";
 import { useAuth } from "../hooks/use-auth.js";
 
-import Footer from "./Footer";
 import "../pages/SignupPage.css";
 
 function SignupForm() {
@@ -123,7 +122,6 @@ function SignupForm() {
             <button className="submit-button" type="submit">Sign Up</button>
         </form>
       </div>
-      <Footer />
     </div>
   );
 }
